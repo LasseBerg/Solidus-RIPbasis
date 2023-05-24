@@ -1,0 +1,7 @@
+{
+    "SIC": 9999,
+    "TEM": 9999,
+    "SEN": "/dev/ttyUSB1",
+    "CAN": "/dev/ttyUSB3",
+    "SER": "/dev/ttyUSB2"
+}
