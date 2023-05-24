@@ -1,0 +1,517 @@
+[sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: Traceback (most recent call last):
+  File "/home/robot/OLED_Stats/stats.py", line 75, in <module>
+    oled.show()
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_ssd1306.py", line 213, in show
+    self.write_cmd(SET_COL_ADDR)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_ssd1306.py", line 270, in write_cmd
+    self.i2c_device.write(self.temp)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 101, in write
+    self.i2c.writeto(self.device_address, buf, start=start, end=end)
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 174, in writeto
+    return self._i2c.writeto(address, memoryview(buffer)[start:end], stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 52, in writeto
+    self._i2c_bus.write_bytes(address, buffer[start:end])
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 320, in write_bytes
+    self._device.write(buf)
+OSError: [Errno 121] Remote I/O error
+[sudo] password for robot: Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 176, in __probe_for_device
+    self.i2c.writeto(self.device_address, b"")
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 175, in writeto
+    return self._i2c.writeto(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 52, in writeto
+    self._i2c_bus.write_bytes(address, buffer[start:end])
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 320, in write_bytes
+    self._device.write(buf)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 182, in __probe_for_device
+    self.i2c.readfrom_into(self.device_address, result)
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 165, in readfrom_into
+    return self._i2c.readfrom_into(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 59, in readfrom_into
+    readin = self._i2c_bus.read_bytes(address, end - start)
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 187, in read_bytes
+    return self._device.read(number)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/robot/OLED_Stats/stats.py", line 29, in <module>
+    oled = adafruit_ssd1306.SSD1306_I2C(WIDTH, HEIGHT, i2c, addr=0x3C, reset=oled_reset)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_ssd1306.py", line 245, in __init__
+    self.i2c_device = i2c_device.I2CDevice(i2c, addr)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 63, in __init__
+    self.__probe_for_device()
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 185, in __probe_for_device
+    raise ValueError("No I2C device at address: 0x%x" % self.device_address)
+ValueError: No I2C device at address: 0x3c
+[sudo] password for robot: Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 176, in __probe_for_device
+    self.i2c.writeto(self.device_address, b"")
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 175, in writeto
+    return self._i2c.writeto(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 52, in writeto
+    self._i2c_bus.write_bytes(address, buffer[start:end])
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 320, in write_bytes
+    self._device.write(buf)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 182, in __probe_for_device
+    self.i2c.readfrom_into(self.device_address, result)
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 165, in readfrom_into
+    return self._i2c.readfrom_into(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 59, in readfrom_into
+    readin = self._i2c_bus.read_bytes(address, end - start)
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 187, in read_bytes
+    return self._device.read(number)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/robot/OLED_Stats/stats.py", line 29, in <module>
+    oled = adafruit_ssd1306.SSD1306_I2C(WIDTH, HEIGHT, i2c, addr=0x3C, reset=oled_reset)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_ssd1306.py", line 245, in __init__
+    self.i2c_device = i2c_device.I2CDevice(i2c, addr)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 63, in __init__
+    self.__probe_for_device()
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 185, in __probe_for_device
+    raise ValueError("No I2C device at address: 0x%x" % self.device_address)
+ValueError: No I2C device at address: 0x3c
+[sudo] password for robot: Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 176, in __probe_for_device
+    self.i2c.writeto(self.device_address, b"")
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 175, in writeto
+    return self._i2c.writeto(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 52, in writeto
+    self._i2c_bus.write_bytes(address, buffer[start:end])
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 320, in write_bytes
+    self._device.write(buf)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 182, in __probe_for_device
+    self.i2c.readfrom_into(self.device_address, result)
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 165, in readfrom_into
+    return self._i2c.readfrom_into(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 59, in readfrom_into
+    readin = self._i2c_bus.read_bytes(address, end - start)
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 187, in read_bytes
+    return self._device.read(number)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/robot/OLED_Stats/stats.py", line 29, in <module>
+    oled = adafruit_ssd1306.SSD1306_I2C(WIDTH, HEIGHT, i2c, addr=0x3C, reset=oled_reset)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_ssd1306.py", line 245, in __init__
+    self.i2c_device = i2c_device.I2CDevice(i2c, addr)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 63, in __init__
+    self.__probe_for_device()
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 185, in __probe_for_device
+    raise ValueError("No I2C device at address: 0x%x" % self.device_address)
+ValueError: No I2C device at address: 0x3c
+[sudo] password for robot: Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 176, in __probe_for_device
+    self.i2c.writeto(self.device_address, b"")
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 175, in writeto
+    return self._i2c.writeto(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 52, in writeto
+    self._i2c_bus.write_bytes(address, buffer[start:end])
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 320, in write_bytes
+    self._device.write(buf)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 182, in __probe_for_device
+    self.i2c.readfrom_into(self.device_address, result)
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 165, in readfrom_into
+    return self._i2c.readfrom_into(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 59, in readfrom_into
+    readin = self._i2c_bus.read_bytes(address, end - start)
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 187, in read_bytes
+    return self._device.read(number)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/robot/OLED_Stats/stats.py", line 29, in <module>
+    oled = adafruit_ssd1306.SSD1306_I2C(WIDTH, HEIGHT, i2c, addr=0x3C, reset=oled_reset)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_ssd1306.py", line 245, in __init__
+    self.i2c_device = i2c_device.I2CDevice(i2c, addr)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 63, in __init__
+    self.__probe_for_device()
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 185, in __probe_for_device
+    raise ValueError("No I2C device at address: 0x%x" % self.device_address)
+ValueError: No I2C device at address: 0x3c
+[sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 176, in __probe_for_device
+    self.i2c.writeto(self.device_address, b"")
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 175, in writeto
+    return self._i2c.writeto(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 52, in writeto
+    self._i2c_bus.write_bytes(address, buffer[start:end])
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 320, in write_bytes
+    self._device.write(buf)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 182, in __probe_for_device
+    self.i2c.readfrom_into(self.device_address, result)
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 165, in readfrom_into
+    return self._i2c.readfrom_into(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 59, in readfrom_into
+    readin = self._i2c_bus.read_bytes(address, end - start)
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 187, in read_bytes
+    return self._device.read(number)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/robot/OLED_Stats/stats.py", line 29, in <module>
+    oled = adafruit_ssd1306.SSD1306_I2C(WIDTH, HEIGHT, i2c, addr=0x3C, reset=oled_reset)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_ssd1306.py", line 245, in __init__
+    self.i2c_device = i2c_device.I2CDevice(i2c, addr)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 63, in __init__
+    self.__probe_for_[sudo] password for robot: Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 176, in __probe_for_device
+    self.i2c.writeto(self.device_address, b"")
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 175, in writeto
+    return self._i2c.writeto(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 52, in writeto
+    self._i2c_bus.write_bytes(address, buffer[start:end])
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 320, in write_bytes
+    self._device.write(buf)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 182, in __probe_for_device
+    self.i2c.readfrom_into(self.device_address, result)
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 165, in readfrom_into
+    return self._i2c.readfrom_into(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 59, in readfrom_into
+    readin = self._i2c_bus.read_bytes(address, end - start)
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 187, in read_bytes
+    return self._device.read(number)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/robot/OLED_Stats/stats.py", line 29, in <module>
+    oled = adafruit_ssd1306.SSD1306_I2C(WIDTH, HEIGHT, i2c, addr=0x3C, reset=oled_reset)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_ssd1306.py", line 245, in __init__
+    self.i2c_device = i2c_device.I2CDevice(i2c, addr)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 63, in __init__
+    self.__probe_for_device()
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 185, in __probe_for_device
+    raise ValueError("No I2C device at address: 0x%x" % self.device_address)
+ValueError: No I2C device at address: 0x3c
+[sudo] password for robot: Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 176, in __probe_for_device
+    self.i2c.writeto(self.device_address, b"")
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 175, in writeto
+    return self._i2c.writeto(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 52, in writeto
+    self._i2c_bus.write_bytes(address, buffer[start:end])
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 320, in write_bytes
+    self._device.write(buf)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 182, in __probe_for_device
+    self.i2c.readfrom_into(self.device_address, result)
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 165, in readfrom_into
+    return self._i2c.readfrom_into(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 59, in readfrom_into
+    readin = self._i2c_bus.read_bytes(address, end - start)
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 187, in read_bytes
+    return self._device.read(number)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/robot/OLED_Stats/stats.py", line 29, in <module>
+    oled = adafruit_ssd1306.SSD1306_I2C(WIDTH, HEIGHT, i2c, addr=0x3C, reset=oled_reset)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_ssd1306.py", line 245, in __init__
+    self.i2c_device = i2c_device.I2CDevice(i2c, addr)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 63, in __init__
+    self.__probe_for_device()
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 185, in __probe_for_device
+    raise ValueError("No I2C device at address: 0x%x" % self.device_address)
+ValueError: No I2C device at address: 0x3c
+[sudo] password for robot: Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 176, in __probe_for_device
+    self.i2c.writeto(self.device_address, b"")
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 175, in writeto
+    return self._i2c.writeto(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 52, in writeto
+    self._i2c_bus.write_bytes(address, buffer[start:end])
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 320, in write_bytes
+    self._device.write(buf)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 182, in __probe_for_device
+    self.i2c.readfrom_into(self.device_address, result)
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 165, in readfrom_into
+    return self._i2c.readfrom_into(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 59, in readfrom_into
+    readin = self._i2c_bus.read_bytes(address, end - start)
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 187, in read_bytes
+    return self._device.read(number)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/robot/OLED_Stats/stats.py", line 29, in <module>
+    oled = adafruit_ssd1306.SSD1306_I2C(WIDTH, HEIGHT, i2c, addr=0x3C, reset=oled_reset)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_ssd1306.py", line 245, in __init__
+    self.i2c_device = i2c_device.I2CDevice(i2c, addr)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 63, in __init__
+    self.__probe_for_device()
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 185, in __probe_for_device
+    raise ValueError("No I2C device at address: 0x%x" % self.device_address)
+ValueError: No I2C device at address: 0x3c
+[sudo] password for robot: Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 176, in __probe_for_device
+    self.i2c.writeto(self.device_address, b"")
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 175, in writeto
+    return self._i2c.writeto(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 52, in writeto
+    self._i2c_bus.write_bytes(address, buffer[start:end])
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 320, in write_bytes
+    self._device.write(buf)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 182, in __probe_for_device
+    self.i2c.readfrom_into(self.device_address, result)
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 165, in readfrom_into
+    return self._i2c.readfrom_into(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 59, in readfrom_into
+    readin = self._i2c_bus.read_bytes(address, end - start)
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 187, in read_bytes
+    return self._device.read(number)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/robot/OLED_Stats/stats.py", line 29, in <module>
+    oled = adafruit_ssd1306.SSD1306_I2C(WIDTH, HEIGHT, i2c, addr=0x3C, reset=oled_reset)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_ssd1306.py", line 245, in __init__
+    self.i2c_device = i2c_device.I2CDevice(i2c, addr)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 63, in __init__
+    self.__probe_for_device()
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 185, in __probe_for_device
+    raise ValueError("No I2C device at address: 0x%x" % self.device_address)
+ValueError: No I2C device at address: 0x3c
+[sudo] password for robot: Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 176, in __probe_for_device
+    self.i2c.writeto(self.device_address, b"")
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 175, in writeto
+    return self._i2c.writeto(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 52, in writeto
+    self._i2c_bus.write_bytes(address, buffer[start:end])
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 320, in write_bytes
+    self._device.write(buf)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 182, in __probe_for_device
+    self.i2c.readfrom_into(self.device_address, result)
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 165, in readfrom_into
+    return self._i2c.readfrom_into(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 59, in readfrom_into
+    readin = self._i2c_bus.read_bytes(address, end - start)
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 187, in read_bytes
+    return self._device.read(number)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/robot/OLED_Stats/stats.py", line 29, in <module>
+    oled = adafruit_ssd1306.SSD1306_I2C(WIDTH, HEIGHT, i2c, addr=0x3C, reset=oled_reset)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_ssd1306.py", line 245, in __init__
+    self.i2c_device = i2c_device.I2CDevice(i2c, addr)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 63, in __init__
+    self.__probe_for_device()
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 185, in __probe_for_device
+    raise ValueError("No I2C device at address: 0x%x" % self.device_address)
+ValueError: No I2C device at address: 0x3c
+[sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot:                            [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 176, in __probe_for_device
+    self.i2c.writeto(self.device_address, b"")
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 175, in writeto
+    return self._i2c.writeto(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 52, in writeto
+    self._i2c_bus.write_bytes(address, buffer[start:end])
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 320, in write_bytes
+    self._device.write(buf)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 182, in __probe_for_device
+    self.i2c.readfrom_into(self.device_address, result)
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 165, in readfrom_into
+    return self._i2c.readfrom_into(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 59, in readfrom_into
+    readin = self._i2c_bus.read_bytes(address, end - start)
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 187, in read_bytes
+    return self._device.read(number)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/robot/OLED_Stats/stats.py", line 29, in <module>
+    oled = adafruit_ssd1306.SSD1306_I2C(WIDTH, HEIGHT, i2c, addr=0x3C, reset=oled_reset)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_ssd1306.py", line 245, in __init__
+    self.i2c_device = i2c_device.I2CDevice(i2c, addr)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 63, in __init__
+    self.__probe_for_device()
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 185, in __probe_for_device
+    raise ValueError("No I2C device at address: 0x%x" % self.device_address)
+ValueError: No I2C device at address: 0x3c
+[sudo] password for robot: Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 176, in __probe_for_device
+    self.i2c.writeto(self.device_address, b"")
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 175, in writeto
+    return self._i2c.writeto(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 52, in writeto
+    self._i2c_bus.write_bytes(address, buffer[start:end])
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 320, in write_bytes
+    self._device.write(buf)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 182, in __probe_for_device
+    self.i2c.readfrom_into(self.device_address, result)
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 165, in readfrom_into
+    return self._i2c.readfrom_into(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 59, in readfrom_into
+    readin = self._i2c_bus.read_bytes(address, end - start)
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 187, in read_bytes
+    return self._device.read(number)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/robot/OLED_Stats/stats.py", line 29, in <module>
+    oled = adafruit_ssd1306.SSD1306_I2C(WIDTH, HEIGHT, i2c, addr=0x3C, reset=oled_reset)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_ssd1306.py", line 245, in __init__
+    self.i2c_device = i2c_device.I2CDevice(i2c, addr)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 63, in __init__
+    self.__probe_for_device()
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 185, in __probe_for_device
+    raise ValueError("No I2C device at address: 0x%x" % self.device_address)
+ValueError: No I2C device at address: 0x3c
+[sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 176, in __probe_for_device
+    self.i2c.writeto(self.device_address, b"")
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 175, in writeto
+    return self._i2c.writeto(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 52, in writeto
+    self._i2c_bus.write_bytes(address, buffer[start:end])
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 320, in write_bytes
+    self._device.write(buf)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 182, in __probe_for_device
+    self.i2c.readfrom_into(self.device_address, result)
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 165, in readfrom_into
+    return self._i2c.readfrom_into(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 59, in readfrom_into
+    readin = self._i2c_bus.read_bytes(address, end - start)
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 187, in read_bytes
+    return self._device.read(number)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/robot/OLED_Stats/stats.py", line 29, in <module>
+    oled = adafruit_ssd1306.SSD1306_I2C(WIDTH, HEIGHT, i2c, addr=0x3C, reset=oled_reset)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_ssd1306.py", line 245, in __init__
+    self.i2c_device = i2c_device.I2CDevice(i2c, addr)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 63, in __init__
+    self.__probe_for_device()
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 185, in __probe_for_device
+    raise ValueError("No I2C device at address: 0x%x" % self.device_address)
+ValueError: No I2C device at address: 0x3c
+[sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 176, in __probe_for_device
+    self.i2c.writeto(self.device_address, b"")
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 175, in writeto
+    return self._i2c.writeto(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 52, in writeto
+    self._i2c_bus.write_bytes(address, buffer[start:end])
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 320, in write_bytes
+    self._device.write(buf)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 182, in __probe_for_device
+    self.i2c.readfrom_into(self.device_address, result)
+  File "/usr/local/lib/python3.8/dist-packages/busio.py", line 165, in readfrom_into
+    return self._i2c.readfrom_into(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 59, in readfrom_into
+    readin = self._i2c_bus.read_bytes(address, end - start)
+  File "/usr/local/lib/python3.8/dist-packages/Adafruit_PureIO/smbus.py", line 187, in read_bytes
+    return self._device.read(number)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/robot/OLED_Stats/stats.py", line 29, in <module>
+    oled = adafruit_ssd1306.SSD1306_I2C(WIDTH, HEIGHT, i2c, addr=0x3C, reset=oled_reset)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_ssd1306.py", line 245, in __init__
+    self.i2c_device = i2c_device.I2CDevice(i2c, addr)
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 63, in __init__
+    self.__probe_for_device()
+  File "/usr/local/lib/python3.8/dist-packages/adafruit_bus_device/i2c_device.py", line 185, in __probe_for_device
+    raise ValueError("No I2C device at address: 0x%x" % self.device_address)
+ValueError: No I2C device at address: 0x3c
+[sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot:                            [sudo] password for robot: [sudo] password for robot:                            [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot:                            [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: [sudo] password for robot: 

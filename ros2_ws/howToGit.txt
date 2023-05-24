@@ -1,0 +1,8 @@
+git add .
+git commit -m "commit message"
+git push origin master 
+(wenn fehler) ssh-add
+git push origin master
+
+(make sure everything is up to date)
+git pull origin master
